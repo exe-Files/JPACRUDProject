@@ -18,5 +18,11 @@ public class PokemonController {
 		model.addAttribute("pokemon", dao.findById(1)); //DEBUG
 		return "index";
 	}
+	
+	@RequestMapping("getPokemon.do")
+	public String showPokemon(Integer pId, Model model){
+		model.addAttribute("pokemon", dao.findById(pId));
+		return "result";
+	}
 
 }

@@ -20,4 +20,27 @@ public class PokemonDAOJpaImpl implements PokemonDAO {
 		return em.find(Pokemon.class, id);
 	}
 
+	@Override
+	public Pokemon findByName(String name) {
+		return em.find(Pokemon.class, name);
+	}
+
+	@Override
+	public Pokemon update(int id, Pokemon pokemon) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Pokemon create(Pokemon pokemon) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Pokemon destroy(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
