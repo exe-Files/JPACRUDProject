@@ -12,6 +12,6 @@ public interface PokemonDAO {
 	
 	Pokemon create(Pokemon pokemon);
 	
-	Pokemon destroy(int id);
+	boolean destroy(int id);
 
 }

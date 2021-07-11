@@ -46,6 +46,8 @@ class PokemonTest {
 	void test_Pokemon_entitiy_mapping() {
 		assertNotNull(pokemon);
 		assertEquals("Bulbasaur", pokemon.getName());
+		assertEquals("Grass", pokemon.getType1());
+		assertEquals("Poison", pokemon.getType2());
 	}
 
 }
