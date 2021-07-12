@@ -3,17 +3,12 @@
 
 .home-image {
 	background-image: url("pokedex.png");
-	height: auto;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;;
-	/* height: 500px; */
-	max-width: 90%;
-	height: auto;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+	height: 500px;
+	min-width: 40%;
+	max-width: 80%;
 	position: relative;
 }
 

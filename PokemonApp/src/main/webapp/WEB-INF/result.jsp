@@ -15,121 +15,109 @@
 <title>Search Results</title>
 </head>
 <body>
-	<a href="home.do"><button class="btn btn-dark mt-1 fixed-top">Go
-			Home</button></a>
+	<div>
+		<a href="home.do"><button class="btn btn-dark mt-1 fixed-top">Go
+				Home</button></a>
+	</div>
 	<div
 		class="container vh-100 d-flex flex-column justify-content-center ">
 		<div>
 			<h1 class="text-center">Pokemon Results</h1>
 		</div>
 		<div class="w-100 border p-4 form-border">
-			<table class="table table-hover">
-				<tbody>
-				<thead class="thead-dark">
+			<table class="table">
+				<div>
 					<h2>ID# ${pokemon.id} ${pokemon.name}</h2>
-					<div>
-						Edit: <a aria-label="Edit"
-							href="updatePkmn.do?pkmnId=${pokemon.id}"
-							class="button bi bi-journal"></a>
-					</div>
-					
-					<div>
-					<div>
-					Delete: <a aria-label="Delete"
-							href="deletePkmn.do?pkmnId=${pokemon.id}"
-							class="button bi bi-trash"></a>
-					</div>
-						
-						<button type="button" class="btn bi bi-trash"
-							data-bs-toggle="modal" data-bs-target="#m${pokemon.id}">
-						</button>
-						<!-- Modal -->
-						<div class="modal fade" id="m${pokemon.id}" tabindex="-1"
-							aria-labelledby="exampleModalLabel" aria-hidden="true">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="exampleModalLabel">Do you
-											wish to continue?</h5>
-										<button type="button" class="btn-close"
-											data-bs-dismiss="modal" aria-label="Close"></button>
-									</div>
-									<div class="modal-body">
-										Are you sure you want to delete <strong>${pokemon.name}</strong>
-									</div>
-									<div class="modal-footer d-flex justify-content-between">
+				</div>
+				<div>
+					Edit: <a aria-label="Edit"
+						href="updatePkmn.do?pkmnId=${pokemon.id}"
+						class="button bi bi-journal"></a>
+				</div>
 
-										<button type="button" class="btn btn-secondary"
-											data-bs-dismiss="modal">Close</button>
-										<a href="deletePkmn.do?pkmnId=${pokemon.id}"
-											class="btn btn-danger">Delete Pokemon</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div>
-						<c:if test="${pokemon.id le 252}">
-							<img
-								src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png"
-								height=300px width=300px alt="An image of ${pokemon.name}">
-							<tr scope="row">
-						</c:if>
-					</div>
-					<div>
-						Name
-						<td>${pokemon.name}</td>
-						</tr>
-						<tr scope="row">Type 1
-						</tr>
-						${pokemon.type1}
-						<tr scope="row">Type 2
-						</tr>
-						${pokemon.type2}
-						<tr scope="row">Description
-						</tr>
-						${pokemon.description}
-						<tr scope="row">Total
-						</tr>
-						${pokemon.total}
-						<tr scope="row">HP
-						</tr>
-						${pokemon.hp}
-						<tr scope="row">Attack
-						</tr>
-						${pokemon.attack}
-						<tr scope="row">Defense
-						</tr>
-						${pokemon.defense}
-						<tr scope="row">Special Attack
-						</tr>
-						${pokemon.spAttack}
-						<tr scope="row">Special Defense
-						</tr>
-						${pokemon.spDefense}
-						<tr scope="row">Speed
-						</tr>
-						${pokemon.speed}
-						<tr scope="row">Generation
-						</tr>
-						${pokemon.generation}
-						<tr scope="row">Height
-						</tr>
-						${pokemon.height}
-						<tr scope="row">Weight
-						</tr>
-						${pokemon.weight}
-						<tr scope="row">Catch Rate
-						</tr>
-						${pokemon.catchRate}
-						<tr scope="row">Release Year
-						</tr>
-						${pokemon.releaseYear}
-					</div>
-				</thead>
-			</table>
+				<div>
+					Delete: <a aria-label="Delete"
+						href="deletePkmn.do?pkmnId=${pokemon.id}"
+						class="button bi bi-trash"></a>
+				</div>
+
+
+				<div>
+					<c:if test="${pokemon.id <= 252}">
+						<img
+							src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png"
+							height=250px width=250px alt="An image of ${pokemon.name}">
+					</c:if>
+				</div>
+				<tr scope="row">
+					<td>Name:</td>
+					<td>${pokemon.name}</td>
+				</tr>
+				<tr scope="row">
+					<td>Type 1</td>
+					<td>${pokemon.type1}</td>
+				</tr>
+				<tr scope="row">
+					<td>Type 2</td>
+					<td>${pokemon.type2}</td>
+
+				</tr>
+				<tr scope="row">
+					<td>Description</td>
+					<td>${pokemon.description}</td>
+				</tr>
+				<tr scope="row">
+					<td>Base Stat Total</td>
+					<td>${pokemon.total}</td>
+				</tr>
+				<tr scope="row">
+					<td>HP</td>
+					<td>${pokemon.hp}</td>
+				</tr>
+				<tr scope="row">
+					<td>Attack</td>
+					<td>${pokemon.attack}</td>
+				</tr>
+				<tr scope="row">
+					<td>Defense</td>
+					<td>${pokemon.defense}</td>
+				</tr>
+				<tr scope="row">
+					<td>Special Attack</td>
+					<td>${pokemon.spAttack}</td>
+				</tr>
+				<tr scope="row">
+					<td>Special Defense</td>
+					<td>${pokemon.spDefense}</td>
+				</tr>
+				<tr scope="row">
+					<td>Speed</td>
+					<td>${pokemon.speed}</td>
+				</tr>
+				<tr scope="row">
+					<td>Generation</td>
+					<td>${pokemon.generation}</td>
+				</tr>
+				<tr scope="row">
+					<td>Height</td>
+					<td>${pokemon.height}</td>
+				</tr>
+				<tr scope="row">
+					<td>Weight</td>
+					<td>${pokemon.weight}</td>
+				</tr>
+				<tr scope="row">
+					<td>Catch Rate</td>
+					<td>${pokemon.catchRate}</td>
+				</tr>
+
+				<tr scope="row">
+					<td>Release Year</td>
+					<td>${pokemon.releaseYear}</td>
+				</tr>
 		</div>
+		</table>
 	</div>
-	${pokemon}
+	</div>
 </body>
 </html>

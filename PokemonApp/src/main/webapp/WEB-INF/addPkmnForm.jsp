@@ -23,9 +23,11 @@
 </head>
 
 <body>
+	<div>
 	<a href="home.do"><button class="btn btn-dark mt-1 fixed-top">Go
 			Home</button></a>
-	<div class="">
+	</div>
+	<div>
 		<div
 			class="container vh-100 d-flex flex-column justify-content-center">
 			<div class="border p-3 form-border border-dark">
@@ -40,12 +42,12 @@
 							</div>
 							<div>
 								<label for="type1">Pokemon Type 1: </label><input name="type1"
-									class="form-control input-sm" placeholder="Enter Pokemon Name"
+									class="form-control input-sm" placeholder="Enter Pokemon Type 1"
 									>
 							</div>
 							<div>
 								<label for="type2">Pokemon Type 2: </label><input name="type2"
-									class="form-control input-sm" placeholder="Enter Pokemon Name"
+									class="form-control input-sm" placeholder="Enter Pokemon Type 2"
 									>
 							</div>
 							<div>
@@ -55,11 +57,6 @@
 							</div>
 						</div>
 						<div class="mt-3 mb-2 d-flex justify-content-between">
-							<div>
-								<label for="total">Base Stat Total: </label><input
-									name="total" type="number" min="0" max="800"
-									placeholder="Enter the base stat total" value="300">
-							</div>
 							<div>
 								<label for="hp">HP: </label><input
 									name="hp" type="number" placeholder="Enter HP" min="0" max="200"
@@ -90,6 +87,11 @@
 									name="speed" placeholder="Enter Speed Stat" value="50"
 									type="number" min="0" max="200" step=1>
 							</div>
+							<div>
+								<label for="total">Base Stat Total: </label><input
+									name="total" type="number" min="0" max="800"
+									placeholder="Enter the base stat total" value="300">
+							</div>
 						</div>
 						<div class="d-flex justify-content-between">
 							<div class="w-50">
@@ -100,13 +102,12 @@
 									<option value=2>II </option>
 								</select>
 							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col">
-							<label for="releaseYear">Release Year: <input name="releaseYear"
-								class="form-control" type="number"
-								placeholder="Enter the year introduced" min="1950" max="2099" value="1990"></label>
+							<div class="col">
+								<label for="releaseYear">Release Year: <input
+									name="releaseYear" class="form-control" type="number"
+									placeholder="Enter the year introduced" min="1950" max="2099"
+									value="1990"></label>
+							</div>
 						</div>
 					</div>
 					<div class="text-center">

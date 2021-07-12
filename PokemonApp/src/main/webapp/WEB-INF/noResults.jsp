@@ -24,7 +24,7 @@
 		<a href="home.do"><button class="btn btn-dark mt-1 fixed-top">Go
 				Home</button></a>
 	</div>
-	<div>
+	<div class="container vh-100 d-flex flex-column justify-content-center">
 		<h1>No results found!</h1>
 		<p>Looks like something went wrong with your search, please try
 			again.</p>
