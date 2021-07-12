@@ -15,26 +15,26 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 <link href="css/homeStyles.css" rel="stylesheet">
-<title>Edit Film</title>
+<title>Updated Pokemon</title>
 </head>
 <body>
 	<a href="home.do"><button class="btn btn-dark mt-1 fixed-top">Go
 			Home</button></a>
 	<div class="container vh-100 d-flex flex-column justify-content-center ">
 	<c:choose>
-		<c:when test="${not editedFilm}">
+		<c:when test="${empty updatedPkmn}">
 			<div>
-				<h1 class="text-center">Film not edited</h1>
+				<h1 class="text-center">${pokemon.name} successfully updated.</h1>
 			</div>
 		</c:when>
 		<c:otherwise>
 			<div>
-				<h1 class="text-center">Film successfully edited.</h1>
+				<h1 class="text-center">${pokemon.name} not updated</h1>
 			</div>
 		</c:otherwise>
 	</c:choose>
 	</div>
-	<a<%-- href="result.do?${typeOfSearch}=${userSearch}" --%>>Return
-		to search</a>
+	<a href="updatePkmn.do?pkmnId=${pokemon.id}">Continue Editing</a>
+	
 </body>
 </html>

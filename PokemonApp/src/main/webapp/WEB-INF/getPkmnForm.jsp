@@ -12,7 +12,7 @@
 	crossorigin="anonymous">
 <link href="css/homeStyles.css" rel="stylesheet">
 <meta charset="UTF-8">
-<title>Get your film</title>
+<title>Find a Pokemon</title>
 </head>
 <body>
 	<a href="home.do"><button class="btn btn-dark mt-1 fixed-top">Go

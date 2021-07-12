@@ -8,9 +8,9 @@ public interface PokemonDAO {
 	
 	Pokemon findByName(String name);
 	
-	Pokemon update(int id, Pokemon pokemon);
-	
 	Pokemon create(Pokemon pokemon);
+	
+	Pokemon update(int id, Pokemon pokemon);
 	
 	boolean destroy(int id);
 

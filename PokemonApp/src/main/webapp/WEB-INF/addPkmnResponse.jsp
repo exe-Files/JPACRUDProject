@@ -25,10 +25,10 @@
 	<div
 		class="container vh-100 d-flex flex-column justify-content-center ">
 		<div>
-			<h1 class="text-center">Successfully added ${userFilm.title}</h1>
+			<h1 class="text-center">Successfully added ${pokemon.name}</h1>
 		</div>
 		<div class="w-100 border p-4 form-border">
-			<h3>New film ID of ${userFilm.id }</h3>
+			<h3>New Pokemon ID of ${pokemon.id }</h3>
 		</div>
 	</div>
 </body>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 
 <!DOCTYPE html>
@@ -19,39 +20,41 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 <link href="css/homeStyles.css" rel="stylesheet">
-<title>Add a Pokemon</title>
+</head>
+<title>Update Pokemon</title>
 </head>
 
 <body>
+
 	<a href="home.do"><button class="btn btn-dark mt-1 fixed-top">Go
 			Home</button></a>
 	<div class="">
 		<div
 			class="container vh-100 d-flex flex-column justify-content-center">
 			<div class="border p-3 form-border border-dark">
-				<h1 class="text-center">Add a Pokemon</h1>
-				<form action="addPkmn.do" method="POST">
+				<h1 class="text-center">Update ${pokemon.name}</h1>
+				<form action="updatedPkmn.do?id=${pokemon.id}" method="POST">
 					<div class="row">
 						<div class="mb-3">
 							<div>
 								<label for="name">Pokemon Name: </label><input name="name"
 									class="form-control input-sm" placeholder="Enter Pokemon Name"
-									required>
+									required value="${pokemon.name}">
 							</div>
 							<div>
 								<label for="type1">Pokemon Type 1: </label><input name="type1"
-									class="form-control input-sm" placeholder="Enter Pokemon Name"
-									>
+									class="form-control input-sm" placeholder="Enter Pokemon Type"
+									value="${pokemon.type1}" >
 							</div>
 							<div>
 								<label for="type2">Pokemon Type 2: </label><input name="type2"
-									class="form-control input-sm" placeholder="Enter Pokemon Name"
+									class="form-control input-sm" placeholder="Enter Pokemon Name" value="${pokemon.type2}"
 									>
 							</div>
 							<div>
 								<label for="description">Pokemon Description: </label>
 								<textarea name="description" class="form-control w-100"
-									placeholder="Enter Pokemon Description"></textarea>
+									placeholder="Enter Pokemon Description" value="${pokemon.description}"></textarea>
 							</div>
 						</div>
 						<div class="mt-3 mb-2 d-flex justify-content-between">
@@ -95,23 +98,24 @@
 							<div class="w-50">
 								<label for="generation">Generation </label> <select
 									class="form-control w-75" name="generation"
-									class="form-control" id="generation">
-									<option value=1>I </option>
-									<option value=2>II </option>
+									class="form-control" id="generation" value="${pokemon.generation}">
+									<option value=1>I</option>
+									<option value=2>II</option>
 								</select>
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col">
-							<label for="releaseYear">Release Year: <input name="releaseYear"
-								class="form-control" type="number"
-								placeholder="Enter the year introduced" min="1950" max="2099" value="1990"></label>
+							<label for="releaseYear">Year Introduced: <input
+								name="releaseYear" class="form-control" type="number"
+								placeholder="Enter the year introduced" min="1950" max="2099"
+								value="${pokemon.releaseYear}"></label>
 						</div>
 					</div>
 					<div class="text-center">
 						<button class="btn btn-outline-dark w-75 mt-3" type="submit"
-							value="Add Pokemon">Submit</button>
+							value="Update Pokemon">Submit</button>
 					</div>
 				</form>
 			</div>

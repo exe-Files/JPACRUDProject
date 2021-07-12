@@ -48,11 +48,12 @@ public class PokemonDAOJpaImpl implements PokemonDAO {
 	@Override
 	public Pokemon update(int id, Pokemon pokemon) {
 		Pokemon updatePkmn = em.find(Pokemon.class, id);
-		System.out.println("Before update: " + updatePkmn);
 		updatePkmn.setName(pokemon.getName());
 		updatePkmn.setType1(pokemon.getType1());
 		updatePkmn.setType2(pokemon.getType2());
-		em.persist(pokemon); //this may need to change, still unclear
+		//TODO add all attributes to change
+		
+		em.persist(updatePkmn); //this may need to change, still unclear
 		em.flush(); // explicit flush, good practice
 		System.out.println("After update: " + updatePkmn);
 		return updatePkmn;
